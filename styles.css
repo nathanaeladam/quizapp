@@ -2,9 +2,8 @@ body{
     background-color: darkslategray !important;
 }
 
-.quiz-card {
+.quiz-cart {
     width: 30rem !important;
-    background-image: url("img/brainbg.jpg");
 }
 
 .container{
@@ -18,4 +17,6 @@ body{
 .question-footer{
     display: flex;
     justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
