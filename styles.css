@@ -1,0 +1,21 @@
+body{
+    background-color: darkslategray !important;
+}
+
+.quiz-card {
+    width: 30rem !important;
+    background-image: url("img/brainbg.jpg");
+}
+
+.container{
+    background-color: darkslategray !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-footer{
+    display: flex;
+    justify-content: space-between;
+}
