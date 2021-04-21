@@ -2,8 +2,13 @@ body{
     background-color: darkslategray !important;
 }
 
-.quiz-cart {
+.quiz-card {
     width: 30rem !important;
+}
+
+.quiz-answer-card:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.05);
 }
 
 .container{
