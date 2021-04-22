@@ -1,5 +1,10 @@
 body{
     background-color: darkslategray !important;
+    height: 100vh;
+}
+
+.z-index-1{
+    z-index: 1;
 }
 
 .quiz-card {
@@ -13,10 +18,14 @@ body{
 
 .container{
     background-color: darkslategray !important;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .question-footer{

@@ -94,9 +94,7 @@ function init() {
 
 function showQuestion() {
     if (currentQuestion >= questions.length) {
-        document.getElementById('endscreen').style = '';    
-        document.getElementById('question-body').style = 'display:none';
-        document.getElementById('right-answer-count').innerHTML = counter.length;    
+        showEndscreen();
     } else {
 
         let question = questions[currentQuestion];
@@ -109,6 +107,11 @@ function showQuestion() {
     }
 }
 
+function showEndscreen(){
+    document.getElementById('endscreen').style = '';    
+    document.getElementById('question-body').style = 'display:none';
+    document.getElementById('right-answer-count').innerHTML = counter.length; 
+}
 
 function answer(selection) {
     let question = questions[currentQuestion];
