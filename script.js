@@ -134,5 +134,8 @@ function resetAnswerButtons() {
 }
 
 function showEndscreen(){
-    
+    document.getElementById('card').innerHTML = `
+        <div>
+        </div>
+    `;
 }
