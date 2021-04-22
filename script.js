@@ -97,3 +97,14 @@ function showQuestion(){
     document.getElementById('answer3').innerHTML = question['answer3'];
     document.getElementById('answer4').innerHTML = question['answer4'];
 }
+
+let idOfRightAnswer = `answer4`;
+
+function answer(selection){
+    if (selection.slice(-1)==questions[currentQuestion]['right_answer']){
+        document.getElementById(selection).parentNode.classList.add('bg-success');
+    }else{
+        document.getElementById(selection).parentNode.classList.add('bg-danger');
+        document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-succcess');
+    }
+}
