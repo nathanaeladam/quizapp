@@ -29,3 +29,7 @@ body{
 .bg-success , .bg-danger{
     color: white;
 }
+
+.bgwhite{
+    background-color: white !important;
+}
