@@ -26,13 +26,17 @@
 
     <div class="container">
 
-        <div class="card quiz-card" id="card">
+        <div class="card quiz-card">
 
-            <div class="card-body">
-                Quiz beendet
+            <div class="card-body endscreen" id="endscreen" style="display: none;">
+                <div>
+                    <h5>Quiz beendet</h5>
+                    <span>Du hast </span><b id="right-answer-count">X</b> von <b id="question-count-endscreen">Y</b> Fragen richtig beantwortet
+                </div>
+                <img src="img/tropy.png">
             </div>
 
-            <div class="card-body">
+            <div class="card-body" id="question-body">
                 <h5 class="card-title" id="questiontext">Frage</h5>
 
                 <div class="card quiz-answer-card mb-2" onclick="answer('answer1')">
@@ -63,7 +67,7 @@
                     <span>
                         Frage <b id="number-of-question">1</b> von <b id="question-count">5</b>
                     </span>
-                        <button onclick="nextQuestion()" id="next-button" class="btn btn-secondary" disabled>
+                    <button onclick="nextQuestion()" id="next-button" class="btn btn-secondary" disabled>
                         Nächste Frage
                     </button>
                 </div>

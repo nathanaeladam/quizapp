@@ -33,3 +33,10 @@ body{
 .bgwhite{
     background-color: white !important;
 }
+
+.endscreen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0 !important;
+}
