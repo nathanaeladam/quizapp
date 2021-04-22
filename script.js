@@ -96,6 +96,7 @@ function showQuestion() {
     if (currentQuestion >= questions.length) {
         showEndscreen();
     } else {
+        let percent = Math.round(currentQuestion / questions.length*100);
 
         let question = questions[currentQuestion];
         document.getElementById('questiontext').innerHTML = question['question'];
