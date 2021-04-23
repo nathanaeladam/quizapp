@@ -99,6 +99,8 @@ function showQuestion() {
         let percent = Math.round(currentQuestion / questions.length*100);
 
         let question = questions[currentQuestion];
+        document.getElementById('progress-bar').style = `width:${percent}%`;
+        document.getElementById('progress-bar').innerHTML = `${percent} %`;
         document.getElementById('questiontext').innerHTML = question['question'];
         document.getElementById('answer1').innerHTML = question['answer1'];
         document.getElementById('answer2').innerHTML = question['answer2'];
