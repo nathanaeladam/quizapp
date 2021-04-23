@@ -1,22 +1,20 @@
-body{
+body {
     background-color: darkslategray !important;
     height: 100vh;
-}
-
-.z-index-1{
-    z-index: 1;
 }
 
 .quiz-card {
     width: 30rem !important;
 }
 
-.quiz-answer-card:hover{
+.quiz-answer-card:hover {
     cursor: pointer;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-.container{
+.startscreen {}
+
+.container {
     background-color: darkslategray !important;
     height: 100vh;
     display: flex;
@@ -28,22 +26,22 @@ body{
     left: 0;
 }
 
-.question-footer{
+.question-footer {
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
     border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.bg-success , .bg-danger{
+.bg-success, .bg-danger {
     color: white;
 }
 
-.bgwhite{
+.bgwhite {
     background-color: white !important;
 }
 
-.endscreen{
+.endscreen {
     display: flex;
     align-items: center;
     justify-content: space-between;

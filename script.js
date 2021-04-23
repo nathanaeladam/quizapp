@@ -88,9 +88,33 @@ let AUDIO_RIGHT = new Audio('audio/right.mp3');
 let AUDIO_WRONG = new Audio('audio/wrong.mp3');
 
 function init() {
+    showStartscreenBody();
+}
+
+function showStartscreenBody() {
+    document.getElementById('endscreen').style = 'display:none';
+    document.getElementById('question-body').style = 'display:none';
+    document.getElementById('startscreen').style = '';
+}
+
+function showQuestionBody() {
+    document.getElementById('endscreen').style = 'display:none';
+    document.getElementById('startscreen').style = 'display:none';
+    document.getElementById('question-body').style = '';
+}
+
+function showEndscreenBody() {
+    document.getElementById('endscreen').style = '';
+    document.getElementById('question-body').style = 'display:none';
+    document.getElementById('startscreen').style = 'display:none';
+    document.getElementById('right-answer-count').innerHTML = counter;
+}
+
+function startQuizGeneralKnowledge() {
     document.getElementById('question-count').innerHTML = questions.length;
     document.getElementById('question-count-endscreen').innerHTML = questions.length;
 
+    showQuestionBody();
     showQuestion();
 }
 
@@ -123,12 +147,6 @@ function updateProgressBar() {
     let percent = Math.round(currentQuestion / questions.length * 100);
     document.getElementById('progress-bar').style.width = `${percent}%`;
     document.getElementById('progress-bar').innerHTML = `${percent} %`;
-}
-
-function showEndscreen() {
-    document.getElementById('endscreen').style = '';
-    document.getElementById('question-body').style = 'display:none';
-    document.getElementById('right-answer-count').innerHTML = counter;
 }
 
 function answer(selection) {
@@ -181,6 +199,5 @@ function newstart() {
     currentQuestion = 0;
     counter = 0;
     init();
-    document.getElementById('endscreen').style = 'display:none';
-    document.getElementById('question-body').style = '';
+    showStartscreenBody();
 }
