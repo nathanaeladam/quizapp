@@ -12,8 +12,6 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.startscreen {}
-
 .container {
     background-color: darkslategray !important;
     height: 100vh;
