@@ -133,32 +133,31 @@ function showEndscreen() {
 
 function answer(selection) {
     let question = questions[currentQuestion];
-    let idOfRightAnswer = `answer${questions[currentQuestion]['right_answer']}`;
 
-    if (selection.slice(-1) == questions[currentQuestion]['right_answer']) {
-        returnRight();
+    if (selection.slice(-1) == question['right_answer']) {
+        returnRight(selection);
     } else {
-        returnWrong();
+        returnWrong(selection);
     }
-    aktivateTheNextQuestionButton();
+    aktivateNextQuestionButton();
 }
 
-function deaktivateTheNextQuestionButton() {
+function deaktivateNextQuestionButton() {
     document.getElementById('next-button').disabled = true;
 }
 
-function aktivateTheNextQuestionButton() {
+function aktivateNextQuestionButton() {
     document.getElementById('next-button').disabled = false;
 }
 
-
-function returnRight() {
+function returnRight(selection) {
     document.getElementById(selection).parentNode.classList.add('bg-success');
     AUDIO_RIGHT.play();
     counter++;
 }
 
-function returnWrong() {
+function returnWrong(selection) {
+    let idOfRightAnswer = `answer${questions[currentQuestion]['right_answer']}`;
     document.getElementById(selection).parentNode.classList.add('bg-danger');
     document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
     AUDIO_WRONG.play();
@@ -166,7 +165,7 @@ function returnWrong() {
 
 function nextQuestion() {
     currentQuestion++;
-    deaktivateTheNextQuestionButton();
+    deaktivateNextQuestionButton();
     resetAnswerButtons();
     showQuestion();
 }
