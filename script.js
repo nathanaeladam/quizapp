@@ -81,6 +81,16 @@ let questions = [
     }
 ];
 
+
+
+
+
+
+
+
+
+
+/*
 let currentQuestion = 0;
 let counter = 0;
 
@@ -201,3 +211,4 @@ function newstart() {
     init();
     showStartscreenBody();
 }
+*/
