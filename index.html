@@ -26,19 +26,22 @@
 
 
             <!-- ------------------------------------------------------------------- -->
-            <div class="card-body startscreen" id="startscreen">
-               <h1>Quizapp</h1>
-               <button onclick="startQuizGeneralKnowledge()" class="btn btn-secondary">Allgemeinwissen</button>
+            <div class="card-body startscreen" id="startScreen">
+                <h1>Quizapp</h1>
+                <button onclick="startQuiz('generalQuestions')" class="btn btn-secondary">Allgemeinwissen</button>
+                <button onclick="startQuiz('mathQuestions')" class="btn btn-secondary">Mathematikfragen</button>
+                <button onclick="startQuiz('itQuestions')" class="btn btn-secondary">Programmierfragen</button>
             </div>
             <!-- -------------------------------------------------------------------- -->
-            <div class="card quiz-card" style="display: none;">
+            <div class="card quiz-card">
 
-                <div class="card-body endscreen" id="endscreen" style="display: none;">
+                <div class="card-body endscreen" id="endScreen">
                     <div>
                         <h5>Quiz beendet</h5>
-                        <p><span>Du hast </span><b id="right-answer-count">X</b> von <b
-                                id="question-count-endscreen">Y</b>
-                            Fragen richtig beantwortet</p>
+                        <p><span>Du hast </span><b id="right-answer-count">X</b> von
+                            <b id="question-count-endscreen">Y</b>
+                            Fragen richtig beantwortet
+                        </p>
                         <span>
                             <button onclick="newstart()">Zurück zur Startseite</button>
                         </span>
@@ -47,32 +50,32 @@
                 </div>
 
                 <!-- --------------------------------------------------- -->
-                <div class="card-body" id="question-body">
+                <div class="card-body" id="questionScreen">
                     <h5 class="card-title" id="questiontext">Frage</h5>
 
                     <div id="progress-bar" class="progress mb-2">
                         <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
                     </div>
 
-                    <div class="card quiz-answer-card mb-2" onclick="answer('answer1')">
+                    <div class="card quiz-answer-card mb-2" onclick="answer('1')">
                         <div class="card-body" id="answer1">
                             Antwort
                         </div>
                     </div>
 
-                    <div class="card quiz-answer-card mb-2" onclick="answer('answer2')">
+                    <div class="card quiz-answer-card mb-2" onclick="answer('2')">
                         <div class="card-body" id="answer2">
                             Antwort
                         </div>
                     </div>
 
-                    <div class="card quiz-answer-card mb-2" onclick="answer('answer3')">
+                    <div class="card quiz-answer-card mb-2" onclick="answer('3')">
                         <div class="card-body" id="answer3">
                             Antwort
                         </div>
                     </div>
 
-                    <div class="card quiz-answer-card mb-2" onclick="answer('answer4')">
+                    <div class="card quiz-answer-card mb-2" onclick="answer('4')">
                         <div class="card-body" id="answer4">
                             Antwort
                         </div>
