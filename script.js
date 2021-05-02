@@ -124,7 +124,7 @@ let Questions = {
             "answer2": "-10,25",
             "answer3": "27,5",
             "answer4": "32,5",
-            "right_answer": "3",
+            "right_answer": "4",
         },
         {
             "question": "Wie hoch ist dein Sparguthaben, wenn du bei einem Zinssatz von 1,5 % im Jahr Zinsen in Höhe von 7,50 € erhältst?",
@@ -236,6 +236,65 @@ let Questions = {
             "answer4": "In PHP",
             "right_answer": "2",
         }
+    ],
+    //-------------------------------------------------------------------------------------
+    "germanQuestions": [
+        {
+            "question": "Eine Datei aus dem Netz herunterzuladen geht heute meist problemlos. Probleme bereitet manch einem das englische Lehnwort für diese Aktion, besonders in der Vergangenheitsform. Wie muss es heißen? Die Datei wurde ... ",
+            "answer1": "gedownloadet",
+            "answer2": "downgeloadet",
+            "answer3": "gedownloadet & downgeloadet",
+            "answer4": "keines dieser Wörter",
+            "right_answer": "2",
+        },
+        {
+            "question": "Welches Wort kann man nicht steigern?",
+            "answer1": "Einzig",
+            "answer2": "Schnell",
+            "answer3": "Laut",
+            "answer4": "Leise",
+            "right_answer": "1",
+        },
+        {
+            "question": "Was ist der Plural von Eis??",
+            "answer1": "Eis",
+            "answer2": "Eiße",
+            "answer3": "Eisse",
+            "answer4": "Eise",
+            "right_answer": "1",
+        },
+        {
+            "question": "Felicitas Alonso mag ihre Heimatstadt Detroit. Was ist das Subjekt?",
+            "answer1": "Felicitas Alonso",
+            "answer2": "mag",
+            "answer3": "ihre Heimatstadt Detroit",
+            "answer4": "Detroit",
+            "right_answer": "1",
+        },
+        {
+            "question": "Was ist Eltern in Singular?",
+            "answer1": "Elt",
+            "answer2": "Elte",
+            "answer3": "Eltern gibt es nur im Plural",
+            "answer4": "Elter",
+            "right_answer": "3",
+        },
+        {
+            "question": "Welchen Buchstaben benötigen wir am häufigsten?",
+            "answer1": "A",
+            "answer2": "E",
+            "answer3": "I",
+            "answer4": "O",
+            "right_answer": "2",
+        },
+        {
+            "question": "Wie lautet die richtige Schreibweise?",
+            "answer1": "seperat",
+            "answer2": "separat",
+            "answer3": "säperat",
+            "answer4": "säparat",
+            "right_answer": "2",
+        }
     ]
 }
 
@@ -246,8 +305,8 @@ let Questions = {
 //___________________________________________________________________________________
 
 let x = Questions['generalQuestions'];     // x are the selection of quiz (example: general knowledge)
-let z = 0;                      // z current question (example: 6 of 10)
-let counter = 0;                // number of right answer counter
+let z = 0;                                 // z current question (example: 6 of 10)
+let counter = 0;                           // number of right answer counter
 
 function init() {
     showStartscreen();
@@ -284,6 +343,7 @@ function startQuiz(i) {
     loadTheQuestionCountdowns();
     showQuestionscreen();
     showQuestion();
+    aktivateAnswerButtons();
 }
 
 function loadNewX(i) {
@@ -300,6 +360,7 @@ function showQuestion() {
         showEndscreen();
     } else {
         updateQuestion();
+        aktivateAnswerButtons();
     }
 }
 
@@ -358,11 +419,13 @@ function answer(y) {
     } else {
         returnWrong(y);
     }
+    deaktivateAnswerButtons();
     aktivateNextQuestionButton();
 }
 
 
 //_______________________________ answer buttons __________________________________________
+
 
 function resetAnswerButtons() {
     for (let i = 1; i < 5; i++) {
@@ -371,6 +434,13 @@ function resetAnswerButtons() {
     }
 }
 
+function aktivateAnswerButtons() {
+    document.getElementById('overlay').classList.remove('z1');
+}
+
+function deaktivateAnswerButtons() {
+    document.getElementById('overlay').classList.add('z1');
+}
 //_____________________________ newstart __________________________________________________
 
 function newstart() {

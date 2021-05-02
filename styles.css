@@ -1,22 +1,52 @@
 body {
-    background-color: darkgreen !important;
     height: 100vh;
 }
 
-.d-none{
+.card {
+    border: none !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.z1 {
+    z-index: 1;
+}
+
+.next-button {
+    z-index: 1;
+}
+
+.background {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+}
+
+.d-none {
     display: none !important;
 }
+
 .quiz-card {
-    width: 30rem !important;
+    width: 90vw;
+    background-image: url("img/brainbg.jpg");
+    background-position: 50% 50%;
+    background-size: 100vw;
 }
 
 .quiz-answer-card:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .container {
-    background-color: darkslategray !important;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -42,13 +72,12 @@ body {
     background-color: white !important;
 }
 
-
-.startscreen{
+.startscreen {
     display: flex;
     flex-direction: column;
 }
 
-.startscreen button{
+.startscreen button {
     margin: 8px;
 }
 
@@ -57,4 +86,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-right: 0 !important;
+}
+
+.text-center {
+    text-align: center;
 }

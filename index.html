@@ -18,7 +18,7 @@
 </head>
 
 <body onload="init()">
-
+    <img src="img/bg.png" class="background">
     <div class="container">
 
 
@@ -27,10 +27,11 @@
 
             <!-- ------------------------------------------------------------------- -->
             <div class="card-body startscreen" id="startScreen">
-                <h1>Quizapp</h1>
+                <h1 class="text-center">Quizapp</h1>
                 <button onclick="startQuiz('generalQuestions')" class="btn btn-secondary">Allgemeinwissen</button>
                 <button onclick="startQuiz('mathQuestions')" class="btn btn-secondary">Mathematikfragen</button>
                 <button onclick="startQuiz('itQuestions')" class="btn btn-secondary">Programmierfragen</button>
+                <button onclick="startQuiz('germanQuestions')" class="btn btn-secondary">Deutschfragen</button>
             </div>
             <!-- -------------------------------------------------------------------- -->
             <div class="card quiz-card">
@@ -52,6 +53,8 @@
                 <!-- --------------------------------------------------- -->
                 <div class="card-body" id="questionScreen">
                     <h5 class="card-title" id="questiontext">Frage</h5>
+
+                    <div class="overlay" id="overlay"></div>
 
                     <div id="progress-bar" class="progress mb-2">
                         <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
@@ -85,7 +88,7 @@
                         <span>
                             Frage <b id="number-of-question">xxx</b> von <b id="question-count">xxx</b>
                         </span>
-                        <button onclick="nextQuestion()" id="next-button" class="btn btn-primary" disabled>
+                        <button onclick="nextQuestion()" id="next-button" class="btn btn-primary next-button" disabled>
                             Nächste Frage
                         </button>
                     </div>
